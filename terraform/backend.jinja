@@ -6,10 +6,10 @@ terraform {
   required_version = ">= 0.15.0"
   backend "s3" {
     region         = "{{ region }}"
-    bucket         = "{{ bucket }}" + "globaltest"
+    bucket         = "{{ bucket }}"
     key            = "{{ key }}"
     dynamodb_table = "{{ dynamodb_table }}"
-    encrypt        = "true"
+    encrypt        = "false"
     kms_key_id     = "{{ kms_key_id }}"
     role_arn       = "{{ aft_admin_role_arn }}"
   }
