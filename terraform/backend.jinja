@@ -6,7 +6,7 @@ terraform {
   required_version = ">= 0.15.0"
   backend "s3" {
     region         = "{{ region }}"
-    bucket         = "{{ bucket }}-globaltest"
+    bucket         = "{{ bucket }}" + "globaltest"
     key            = "{{ key }}"
     dynamodb_table = "{{ dynamodb_table }}"
     encrypt        = "true"
